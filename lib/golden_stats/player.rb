@@ -7,6 +7,9 @@ class Player
     @position = position
     @@all << self
   end 
+  def self.all 
+    @@all 
+  end
   #just trying this out
   #does adding these lines work 
   #need to save my work frequent
