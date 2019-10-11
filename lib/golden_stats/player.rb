@@ -1,10 +1,11 @@
 class Player 
   attr_accessor :name, :jersey_number, :position, :stats
   @@all = []
-  def initialize(name, jersey_number, position, stats) 
-    @name = name 
-    @jersey_number = jersey_number
-    @position = position
+  def initialize
+    #(name, jersey_number, position, stats) 
+    # @name = name 
+    # @jersey_number = jersey_number
+    # @position = position
     @@all << self
   end 
   def self.all 
