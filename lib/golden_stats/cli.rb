@@ -5,11 +5,11 @@ class GoldenStats::CLI
   #   input = ""
   #   while input != "exit"
      puts "Welcome to the Warriors Stats portal!"
-     puts "Please enter a jersey number:"
-     jersey_number = gets.chomp
-     puts "You entered jersey number \"#{jersey_number}\""
-     scraper = GoldenStats::Scraper.new(jersey_number)
-     puts "here are the players"
+     puts "Please enter your faviorite player's name:"
+     name = gets.chomp
+     puts "You entered player \"#{name}\""
+     scraper = GoldenStats::Scraper.new(name)
+     puts "here is the player"
      puts scraper.players
    
   #   puts "To quit, type 'exit'."
