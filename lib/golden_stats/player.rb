@@ -1,7 +1,9 @@
-class Player 
-  attr_accessor :name, :jersey_number, :position, :stats
+class GoldenStats::Player 
+  attr_accessor :name, :url
   @@all = []
-  def initialize
+  def initialize(name, url)
+    @name = name 
+    @url = url
     #(name, jersey_number, position, stats) 
     # @name = name 
     # @jersey_number = jersey_number
