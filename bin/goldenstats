@@ -1,2 +1,2 @@
-#!/usr/bin/env
+#!/usr/bin/env ruby
 GoldenStats.new.start
