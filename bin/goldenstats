@@ -1,2 +1,5 @@
 #!/usr/bin/env ruby
-GoldenStats.new.start
+require "bundler/setup"
+
+require "golden_stats"
+GoldenStats::CLI.new.start
