@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["'Sydnee Sampson'"]
   spec.email         = ["'sbsydnee161416@gmail.com'"]
 
-  spec.summary       = %q{: Write a short summary, because RubyGems requires one.}
+  spec.summary       = "List the stats for each ball player"
   # spec.description   = %q{TODO: Write a longer description or delete this line.}
   # spec.homepage      = "TODO: Put your gem's website or public repo URL here."
   spec.license       = "MIT"
@@ -39,7 +39,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 2.0"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
-  spec.add_development_dependency "pry"
+  #spec.add_development_dependency "pry"
   spec.add_dependency "nokogiri"
-  spec.add_dependency "watir"
+ # spec.add_dependency "watir"
 end
