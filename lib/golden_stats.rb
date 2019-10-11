@@ -1,4 +1,4 @@
-require "uri"
+require "open-uri"
 require "nokogiri"
 require "golden_stats/version"
 require "golden_stats/scraper"

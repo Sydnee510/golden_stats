@@ -9,7 +9,7 @@ class GoldenStats::CLI
      name = gets.chomp
      puts "You entered player \"#{name}\""
      scraper = GoldenStats::Scraper.new(name)
-     puts "here is the player's stats"
+     puts "here is the player's stats:"
      puts scraper.players
    
   #   puts "To quit, type 'exit'."

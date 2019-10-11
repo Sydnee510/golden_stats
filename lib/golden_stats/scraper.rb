@@ -8,7 +8,8 @@ class GoldenStats::Scraper
     @url = "http://www.nba.com/playerfile/#{name}"
    # http://www.nba.com/playerfile/stephen_curry
   end
-  def players 
+  def players
+    doc = Nokogiri::HTML(open(url))
     [url]
   end 
 #   def get_page 
