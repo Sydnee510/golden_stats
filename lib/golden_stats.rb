@@ -1,4 +1,5 @@
 require "golden_stats/version"
+require "golden_stats/scraper"
 require "golden_stats/cli"
 
 

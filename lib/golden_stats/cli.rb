@@ -8,7 +8,10 @@ class GoldenStats::CLI
      puts "Please enter a jersey number:"
      jersey_number = gets.chomp
      puts "You entered jersey number \"#{jersey_number}\""
-   #  puts "To see Stephen Currys stats, enter'1'."
+     scraper = GoldenStats::Scraper.new(jersey_number)
+     puts "here are the players"
+     puts scraper.players
+   
   #   puts "To quit, type 'exit'."
   #   input = gets.strip
   # end 
