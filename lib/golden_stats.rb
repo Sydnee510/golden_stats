@@ -1,5 +1,6 @@
 require "open-uri"
 require "nokogiri"
+require "pry"
 require "golden_stats/version"
 require "golden_stats/player"
 require "golden_stats/scraper"

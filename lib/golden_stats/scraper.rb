@@ -14,9 +14,12 @@ class GoldenStats::Scraper
   end 
    def get_player
     doc =  Nokogiri::HTML(open("https://www.nba.com/warriors/stats/points"))
-    player = doc.css("td player-name a").each do |anchor|
+    player = doc.css("td player-name a").map do |anchor|
+      name = 
+      url = 
+     GoldenStats::Player.new(name, url)
 
-  binding.pry
+ binding.pry
 end 
 end
 #   def 
