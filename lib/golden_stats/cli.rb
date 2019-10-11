@@ -4,8 +4,10 @@ class GoldenStats::CLI
    # puts "hello world!"
   #   input = ""
   #   while input != "exit"
-     puts "Welcome to the Warriors Stats portal!"
-     puts 
+     puts "Welcome to the Warrior's Stats portal!"
+     puts
+    # puts "Here is the roster for the preason #{players}"
+     #puts 
      puts "Please enter your faviorite player's name in this format 'first_last':"
      name = gets.chomp
      puts "You entered player \"#{name}\""
