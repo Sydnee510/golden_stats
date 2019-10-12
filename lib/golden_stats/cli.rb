@@ -9,16 +9,29 @@ class GoldenStats::CLI
      puts "Please enter a number for you favorite player:"
      puts
      players
+     
     end
     
     def players
       GoldenStats::Player.all.each.with_index(1) do |object, index|
        puts "#{index}. #{object.name}"
-       # binding.pry
+       command
     end
   end
+  
+    def command
+      input = ""
+      choice 
+      while input != "exit"
+        input = gets.chomp
+        
+        if (1..30).include?(input to_i)
+          @chosen_player = GoldenStats::Player.all[input to_i - 1]
+          binding.pry
+        end
+      end
+    end 
 end
-#     name = gets.chomp
 #     puts "You entered player \"#{name}\" "
 #     scraper = GoldenStats::Scraper.new(name)
 #     puts "here is the player's stats:"
