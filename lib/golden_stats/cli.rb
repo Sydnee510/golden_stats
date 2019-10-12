@@ -8,17 +8,16 @@ class GoldenStats::CLI
      puts
     # puts "Here is the roster for the preason #{players}"
      #puts 
-     players = ["Kavion Pippen", "Stephen Curry", "Draymond Green", "Glenn Robinson III", "Andrew Harrison", "D'Angelo Russell", "Marquese Chriss", "Damion Lee", "Alfonzo McKinnie", "Jacob Evans", "Omari Spellman", "Ky Bowman", "Juan Toscano-Anderson", "Eric Paschall", "Jordan Poole"]
+    # players = ["Kavion Pippen", "Stephen Curry", "Draymond Green", "Glenn Robinson III", "Andrew Harrison", "D'Angelo Russell", "Marquese Chriss", "Damion Lee", "Alfonzo McKinnie", "Jacob Evans", "Omari Spellman", "Ky Bowman", "Juan Toscano-Anderson", "Eric Paschall", "Jordan Poole"]
      
-     players.each_with_index do |name, index|
+     #players.each_with_index do |name, index|
  # binding.pry
- puts "#{index + 1}" "."  "#{name}"
- end
+# puts "#{index + 1}" "."  "#{name}"
+ #end
  puts
- puts "Enter a number to see Playersinfo:"
-     #puts "Please enter your faviorite player's name in this format 'first_last':"
+ #puts "Enter a number to see Playersinfo:"
+     puts "Please enter your faviorite player's name in this format 'first_last':"
      name = gets.chomp
-     index = gets.chomp
      puts "You entered player \"#{name}\" "
      scraper = GoldenStats::Scraper.new(name)
      puts "here is the player's stats:"
