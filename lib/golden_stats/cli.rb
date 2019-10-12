@@ -15,10 +15,11 @@ class GoldenStats::CLI
  puts "#{index + 1}" "."  "#{name}"
  end
  puts
- puts "Enter number to see Playersinfo:"
+ puts "Enter a number to see Playersinfo:"
      #puts "Please enter your faviorite player's name in this format 'first_last':"
      name = gets.chomp
-     puts "You entered player \"#{name}\""
+     index = gets.chomp
+     puts "You entered player \"#{name}\" "
      scraper = GoldenStats::Scraper.new(name)
      puts "here is the player's stats:"
      puts scraper.players
