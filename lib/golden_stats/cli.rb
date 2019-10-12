@@ -6,16 +6,26 @@ class GoldenStats::CLI
      puts
     # puts "Here is the roster for the preason #{players}"
      GoldenStats::Scraper.scrape
-     puts "Please enter your faviorite player's name in this format 'first_last':"
+     puts "Please enter a number for you favorite player:"
+     puts
+     players
+    end
     
-     name = gets.chomp
-     puts "You entered player \"#{name}\" "
-     scraper = GoldenStats::Scraper.new(name)
-     puts "here is the player's stats:"
-     puts scraper.players
+    def players
+      GoldenStats::Player.all.each.with_index(1) do |object, index|
+       puts "#{index}. #{object.name}"
+       # binding.pry
+    end
+  end
+end
+#     name = gets.chomp
+#     puts "You entered player \"#{name}\" "
+#     scraper = GoldenStats::Scraper.new(name)
+#     puts "here is the player's stats:"
+#     puts scraper.players
    
-  #   puts "To quit, type 'exit'."
-  #   input = gets.strip
-  # end 
-end
-end
+#   #   puts "To quit, type 'exit'."
+#   #   input = gets.strip
+#   # end 
+# end
+# end
