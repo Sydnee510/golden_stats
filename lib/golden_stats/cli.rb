@@ -9,27 +9,31 @@ class GoldenStats::CLI
      puts "Please enter a number for you favorite player:"
      puts
      players
-     
+     command
     end
     
     def players
       GoldenStats::Player.all.each.with_index(1) do |object, index|
        puts "#{index}. #{object.name}"
-       command
     end
   end
   
     def command
+      
       input = ""
-      choice 
+      #choice 
+      puts "testing-1"
       while input != "exit"
         input = gets.chomp
         
-        if (1..30).include?(input to_i)
-          @chosen_player = GoldenStats::Player.all[input to_i - 1]
-          binding.pry
-        end
-      end
+        if (1..30).include?(input.to_i)
+          @chosen_player = GoldenStats::Player.all[input.to_i - 1]
+          puts "#{@chosen_player.name}"
+      #     binding.pry
+       # else input = "exit"
+          
+         end
+       end
     end 
 end
 #     puts "You entered player \"#{name}\" "
