@@ -1,7 +1,6 @@
 #module GoldenStats
 class GoldenStats::CLI
   def start 
-   # puts "hello world!"
   #   input = ""
   #   while input != "exit"
      puts "Welcome to the Warrior's Stats portal!"
@@ -14,9 +13,10 @@ class GoldenStats::CLI
  # binding.pry
 # puts "#{index + 1}" "."  "#{name}"
  #end
- puts
  #puts "Enter a number to see Playersinfo:"
+     GoldenStats::Scraper.new(name)
      puts "Please enter your faviorite player's name in this format 'first_last':"
+    
      name = gets.chomp
      puts "You entered player \"#{name}\" "
      scraper = GoldenStats::Scraper.new(name)
