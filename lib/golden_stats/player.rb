@@ -1,20 +1,18 @@
-class GoldenStats::Player 
+
+class GoldenStats::Player
+  
   attr_accessor :name, :url
+  
   @@all = []
-  def initialize(name, url)
-    @name = name 
-    @url = url
-    #(name, jersey_number, position, stats) 
-    # @name = name 
-    # @jersey_number = jersey_number
-    # @position = position
+  
+  def initialize(attributes)
+    @name = attributes[:name] 
+    @url = attributes[:url]
     @@all << self
   end 
+ 
   def self.all 
     @@all 
   end
-  #just trying this out
-  #does adding these lines work 
-  #need to save my work frequent
-  #new code 
+  
 end 

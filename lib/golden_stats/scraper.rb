@@ -1,7 +1,5 @@
-#require 'nokogiri'
-# require 'open-uri'
 require 'pry'
-# require_relative './player.rb'
+require 'player'
 class GoldenStats::Scraper 
   attr_reader :url
  
@@ -9,9 +7,8 @@ class GoldenStats::Scraper
     doc =  Nokogiri::HTML(open("https://www.nba.com/warriors/stats/points"))
     player = doc.css("span.playerName a").map do |anchor|
       binding.pry
-    #   name = 
-    #   url = 
-    # GoldenStats::Player.new(name, url)
+      hash = { }
+    # GoldenStats::Player.new(hash)
 
  
 end 
