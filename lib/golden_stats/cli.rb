@@ -26,7 +26,7 @@ class GoldenStats::CLI
       input = ""
       
       #choice 
-      while input != "exit"
+      while input != "exit, players"
         input = gets.chomp
         
         if (1..30).include?(input.to_i)
@@ -34,14 +34,23 @@ class GoldenStats::CLI
           puts "You entered player #{@chosen_player.name}"
           puts "His jersey number is #{@chosen_player.pl_num}"
           puts "His position is a #{@chosen_player.pl_pos}"
+          puts "For #{@chosen_player.name}'s game statistics go to:"
+          puts "#{@chosen_player.url}"
+          puts
+          puts "Type 'players' to view the roster again:"
+        
+          
+        
       #     binding.pry
         elsif input.downcase == "exit"
           puts "I hope you are satisfied with the results."
           break
+        elsif input.downcase == "players"
+          start
         else 
           puts "Sorry! Please enter a specific number!"
           command
-          
+    
          end
        end
        puts "See you later!"
