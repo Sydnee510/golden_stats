@@ -6,7 +6,7 @@ class GoldenStats::CLI
      puts
     # puts "Here is the roster for the preason #{players}"
      GoldenStats::Scraper.scrape
-     puts "Please enter a number for you favorite player:"
+     puts "Please enter a number for you favorite player"
      puts
      players
      command
@@ -19,10 +19,9 @@ class GoldenStats::CLI
   end
   
     def command
-      
+      puts "Type the number of your favorite player here!:"
       input = ""
       #choice 
-      puts "testing-1"
       while input != "exit"
         input = gets.chomp
         
@@ -30,10 +29,17 @@ class GoldenStats::CLI
           @chosen_player = GoldenStats::Player.all[input.to_i - 1]
           puts "#{@chosen_player.name}"
       #     binding.pry
-       # else input = "exit"
+        elsif input.downcase == "exit"
+          puts "I hope you are satisfied with the results."
+          break
+        else 
+          puts "Sorry! Please enter a specific number!"
+          command
           
          end
        end
+       puts "See you later!"
+       exit
     end 
 end
 #     puts "You entered player \"#{name}\" "
