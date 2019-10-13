@@ -19,15 +19,21 @@ class GoldenStats::CLI
   end
   
     def command
+      
       puts "Type the number of your favorite player here!:"
+      puts 
+      puts "You can type exit at anytime to leave the program"
       input = ""
+      
       #choice 
       while input != "exit"
         input = gets.chomp
         
         if (1..30).include?(input.to_i)
           @chosen_player = GoldenStats::Player.all[input.to_i - 1]
-          puts "#{@chosen_player.name}"
+          puts "You entered player #{@chosen_player.name}"
+          puts "His jersey number is #{@chosen_player.pl_num}"
+          puts "His position is a #{@chosen_player.pl_pos}"
       #     binding.pry
         elsif input.downcase == "exit"
           puts "I hope you are satisfied with the results."
