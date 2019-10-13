@@ -25,12 +25,12 @@ class GoldenStats::CLI
       puts "You can type exit at anytime to leave the program"
       input = ""
       
-      #choice 
       while input != "exit, players"
         input = gets.chomp
         
-        if (1..30).include?(input.to_i)
+        if (1..players.size).include?(input.to_i)
           @chosen_player = GoldenStats::Player.all[input.to_i - 1]
+          puts
           puts "You entered player #{@chosen_player.name}"
           puts "His jersey number is #{@chosen_player.pl_num}"
           puts "His position is a #{@chosen_player.pl_pos}"
@@ -38,32 +38,22 @@ class GoldenStats::CLI
           puts "#{@chosen_player.url}"
           puts
           puts "Type 'players' to view the roster again:"
-        
+          puts "Or type the number of a player:"
+          puts
+          puts "You can type 'exit' at any time to leave the program"
           
-        
-      #     binding.pry
-        elsif input.downcase == "exit"
-          puts "I hope you are satisfied with the results."
-          break
         elsif input.downcase == "players"
-          start
-        else 
-          puts "Sorry! Please enter a specific number!"
           command
-    
+        elsif input.downcase == "exit"
+           puts
+           puts "I hope you are satisfied with the results."
+           break
+        else 
+          puts "Sorry! Please enter a specific number from the roster!"
+          command
          end
        end
        puts "See you later!"
        exit
     end 
 end
-#     puts "You entered player \"#{name}\" "
-#     scraper = GoldenStats::Scraper.new(name)
-#     puts "here is the player's stats:"
-#     puts scraper.players
-   
-#   #   puts "To quit, type 'exit'."
-#   #   input = gets.strip
-#   # end 
-# end
-# end
