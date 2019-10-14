@@ -25,10 +25,10 @@ class GoldenStats::CLI
     puts "You can type exit at anytime to leave the program".colorize(:red)
     input = ""
       
-    while input != "exit, players"
+    while input != "exit"
       input = gets.chomp
         
-      if (1..players.size).include?(input.to_i)
+      if (1..).include?(input.to_i)
         @chosen_player = GoldenStats::Player.all[input.to_i - 1]
         puts
         puts "You entered player #{@chosen_player.name}".colorize(:yellow)
@@ -37,12 +37,13 @@ class GoldenStats::CLI
         puts "For #{@chosen_player.name}'s game statistics go to:".colorize(:yellow)
         puts "#{@chosen_player.url}".colorize(:cyan)
         puts
-        puts "Type 'players' to view the roster again:".colorize(:magenta)
+        puts "Type 'p' to view the roster again:".colorize(:magenta)
         puts "Or type the number of another player:".colorize(:magenta)
         puts
         puts "You can type 'exit' at any time to leave the program".colorize(:red)
           
-        elsif input.downcase == "players"
+        elsif input.downcase == "p"
+          players
           command
         elsif input.downcase == "exit"
            puts
