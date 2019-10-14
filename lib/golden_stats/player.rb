@@ -5,11 +5,11 @@ class GoldenStats::Player
   
   @@all = []
   
-  def initialize(attributes)
-    @name = attributes[:name] 
-    @url = attributes[:url]
-    @pl_num = attributes[:pl_num]
-    @pl_pos = attributes[:pl_pos]
+  def initialize(url, name, pl_num, pl_pos)
+    @name = name 
+    @url = url
+    @pl_num = pl_num
+    @pl_pos = pl_pos
     @@all << self
   end 
  
