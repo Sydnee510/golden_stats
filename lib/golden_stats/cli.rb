@@ -1,10 +1,8 @@
-#module GoldenStats
 class GoldenStats::CLI
   
   def start 
      puts "Welcome to the Warrior's Stats portal!".colorize(:green)
      puts
-    # puts "Here is the roster for the preason #{players}"
      GoldenStats::Scraper.scrape
      puts "Please enter a number for you favorite player!".colorize(:magenta)
      puts
@@ -13,7 +11,8 @@ class GoldenStats::CLI
   end
     
   def players
-    GoldenStats::Player.all.each.with_index(1) do |object, index|
+    arr = GoldenStats::Player.all.uniq { |player| player.name }
+    arr.each.with_index(1) do |object, index|
     puts "#{index}. #{object.name}".colorize(:blue)
     end
   end
