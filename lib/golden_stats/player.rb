@@ -5,7 +5,7 @@ class GoldenStats::Player
   
   @@all = []
   
-  def initialize(url = nil, name = nil, pl_num = nil, pl_pos = nil)
+  def initialize(url, name, pl_num, pl_pos)
     @name = name 
     @url = url
     @pl_num = pl_num
@@ -16,5 +16,4 @@ class GoldenStats::Player
   def self.all 
     @@all 
   end
-  
 end 

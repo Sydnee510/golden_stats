@@ -18,18 +18,15 @@ class GoldenStats::CLI
   end
   
   def command
-   # players = ""
     puts
     puts "Type the number of your favorite player here!:".colorize(:magenta)
     puts 
     puts "You can type exit at anytime to leave the program".colorize(:red)
     input = ""
-   # players = ""  
     while input != "exit"
       input = gets.chomp
         
-      if (1..).include?(input.to_i)
-        #players = ""
+      if (1..15).include?(input.to_i)
         @chosen_player = GoldenStats::Player.all[input.to_i - 1]
         puts
         puts "You entered player #{@chosen_player.name}".colorize(:yellow)
@@ -42,7 +39,6 @@ class GoldenStats::CLI
         puts "Or type the number of another player:".colorize(:magenta)
         puts
         puts "You can type 'exit' at any time to leave the program".colorize(:red)
-          
         elsif input.downcase == "p"
           players
           command
@@ -56,9 +52,7 @@ class GoldenStats::CLI
           command
         end
       end
-      #players = ""
        puts "See you later!".colorize(:green)
        exit
     end 
-  
 end
