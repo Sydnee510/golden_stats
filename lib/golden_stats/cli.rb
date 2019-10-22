@@ -1,3 +1,4 @@
+require 'pry'
 class GoldenStats::CLI
   
   def start 
@@ -25,8 +26,9 @@ class GoldenStats::CLI
     input = ""
     while input != "exit"
       input = gets.chomp
+      #binding.pry
         
-      if (1..15).include?(input.to_i)
+      if (1..17).include?(input.to_i)
         @chosen_player = GoldenStats::Player.all[input.to_i - 1]
         puts
         puts "You entered player #{@chosen_player.name}".colorize(:yellow)
@@ -49,6 +51,7 @@ class GoldenStats::CLI
         else
           puts
           puts "Sorry! Please enter a specific number from the roster!".colorize(:red)
+          players
           command
         end
       end
